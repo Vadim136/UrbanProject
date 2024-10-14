@@ -16,4 +16,6 @@ for i in range(1, first_stone):
 
 unique_pairs = sorted(set(tuple(sorted(pair)) for pair in pairs_list))
 
-print(*unique_pairs)
+password = "".join(f"{i}{j}" for i, j in unique_pairs)
+
+print(password)
