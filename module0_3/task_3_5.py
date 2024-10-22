@@ -10,5 +10,3 @@ def get_multiplied_digits(number):
         return first * get_multiplied_digits(int(str_number[1:]))
 
 print(get_multiplied_digits(103200))  # Ожидаемый вывод: 6
-
-
