@@ -1,3 +1,4 @@
 {
-    "typescript.preferGoToSourceDefinition": true
+    "typescript.preferGoToSourceDefinition": true,
+    "editor.codeActionsOnSave": {}
 }
