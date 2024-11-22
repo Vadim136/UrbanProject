@@ -1,4 +1,5 @@
 {
     "typescript.preferGoToSourceDefinition": true,
-    "editor.codeActionsOnSave": {}
+    "editor.codeActionsOnSave": {},
+    "workbench.colorTheme": "Monokai"
 }
