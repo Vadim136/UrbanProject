@@ -7,13 +7,9 @@ print(result)
 
 def get_advanced_writer(file_name):
     def write_everything(*data_set):
-        with open(file_name, 'w') as file:
+        with open(file_name, 'w', encoding='utf-8') as file:
             for data in data_set:
-                if isinstance(data, (list, tuple)):
-                    for item in data:
-                        file.write(str(item) + '\n')
-                else:
-                    file.write(str(data) + '\n')
+                file.write(str(data) + '\n')
     return write_everything
 
 # Создание функции для записи в файл
@@ -21,16 +17,9 @@ write = get_advanced_writer('example.txt')
 
 # Запись данных в файл
 write('Это строчка', ['А', 'это', 'уже', 'число', 5, 'в', 'списке'])
-"""
-Это строчка
-А
-это
-уже
-число
-5
-в
-списке
-"""
+
+
+
 import random
 
 
