@@ -9,14 +9,11 @@ def introspection_info(obj):
     attributes = [attr for attr in dir(obj) if not callable(getattr(obj, attr)) and not attr.startswith("__")]
     info['attributes'] = attributes
 
-
     methods = [method for method in dir(obj) if callable(getattr(obj, method)) and not method.startswith("__")]
     info['methods'] = methods
 
-    # Модуль, к которому объект принадлежит
     info['module'] = getattr(obj, '__module__', 'N/A')
 
-    # Дополнительные свойства
     if isinstance(obj, types.FunctionType):
         info['signature'] = inspect.signature(obj)
         info['docstring'] = inspect.getdoc(obj)
