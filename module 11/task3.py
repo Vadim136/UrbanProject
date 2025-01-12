@@ -16,17 +16,17 @@ def introspection_info(obj):
     # Модуль, к которому объект принадлежит
     info['module'] = getattr(obj, '__module__', 'N/A')
 
-    # # Дополнительные свойства
-    # if isinstance(obj, types.FunctionType):
-    #     info['signature'] = inspect.signature(obj)
-    #     info['docstring'] = inspect.getdoc(obj)
-    # elif isinstance(obj, types.MethodType):
-    #     info['signature'] = inspect.signature(obj)
-    #     info['docstring'] = inspect.getdoc(obj)
-    # elif isinstance(obj, (list, tuple, set, frozenset)):
-    #     info['length'] = len(obj)
-    # elif isinstance(obj, dict):
-    #     info['keys'] = list(obj.keys())
+    # Дополнительные свойства
+    if isinstance(obj, types.FunctionType):
+        info['signature'] = inspect.signature(obj)
+        info['docstring'] = inspect.getdoc(obj)
+    elif isinstance(obj, types.MethodType):
+        info['signature'] = inspect.signature(obj)
+        info['docstring'] = inspect.getdoc(obj)
+    elif isinstance(obj, (list, tuple, set, frozenset)):
+        info['length'] = len(obj)
+    elif isinstance(obj, dict):
+        info['keys'] = list(obj.keys())
 
     return info
 
