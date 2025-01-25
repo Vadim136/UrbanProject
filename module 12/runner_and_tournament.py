@@ -11,7 +11,10 @@ class Runner:
         self.distance += self.speed
 
     def __str__(self):
-        return self.name
+        return f"{self.name}"
+    
+    def __repr__(self):
+        return f"{self.name}"
 
     def __eq__(self, other):
         if isinstance(other, str):
@@ -37,3 +40,14 @@ class Tournament:
                     self.participants.remove(participant)
 
         return finishers
+
+# runner1 = Runner("Усэйн", 10)
+# runner2 = Runner("Андрей", 9)
+# runner3 = Runner("Ник", 3)
+
+
+# t = Tournament(90, runner1, runner3)
+# results = t.start()
+# for key in results:
+
+#     print(key, results[key])

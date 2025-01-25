@@ -1,0 +1,6 @@
+2025-01-25 19:30:14,073 | INFO | Succesful divide 3 / 4
+2025-01-25 19:30:14,073 | ERROR | Na nol' ne deli!!!
+Traceback (most recent call last):
+  File "/Users/macTSF/Desktop/UrbanProject/UrbanProject/module 12/calc.py", line 14, in div
+    a / b
+ZeroDivisionError: division by zero
