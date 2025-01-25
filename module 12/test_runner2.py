@@ -5,7 +5,7 @@ from runner_and_tournament import Runner, Tournament
 
 
 class TournamentTest(unittest.TestCase):
-    is_frozen = True
+    is_frozen = False
 
     @classmethod
     def setUpClass(cls):
